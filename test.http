@@ -1,0 +1,33 @@
+@baseUrl = http://localhost:3000/api
+
+# Categories
+
+# @name getAllCategories
+GET {{baseUrl}}/categories
+
+###
+
+# @name getCategoriesById
+GET {{baseUrl}}/categories/
+
+###
+
+# @name addCategories
+POST {{baseUrl}}/categories/3
+Content-Type: application/json
+
+{
+    "id": "1"
+}
+###
+
+# @name updateCategories
+PATCH  {{baseUrl}}/categories/1
+Content-Type: application/json
+
+{
+    "name": "Mobile"
+}
+### 
+# @name pagination
+GET {{baseUrl}}/products?_limit=10&_page=1
